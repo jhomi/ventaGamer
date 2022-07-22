@@ -287,9 +287,34 @@ public class Trasformadas {
         imprimirMatriz(matriz);
     }
     public void trasfomada6() {
-        
+        System.out.println("Ingrese dimesion de la Matris:");
+        int dimension = cs.nextInt();
+        System.out.println("Ingrese valor inicial de la matris:");
+        int valor = cs.nextInt();
+        String[][] matriz = new String[dimension][dimension];
+        for (int fila = 0; fila < matriz.length; fila++) {
+            for (int columna = 0; columna  <= fila; columna++) {
+                matriz[fila][columna] = String.valueOf(valor);
+                valor++;
+            }
+        }
+        imprimirMatriz(matriz);
     }
-
+    public void trasfomada7() {
+        String[][] matriz;
+        System.out.println("Ingrese la dimesion de Matris:");
+        int dimension = cs.nextInt();
+        System.out.println("Ingrese el valor inicial de la matris:");
+        int valor = cs.nextInt();
+        matriz = new String[dimension][dimension];
+        for (int fila = 0; fila < matriz.length; fila++) {
+            for (int columna = 0; columna <= (matriz.length - 1) - fila; columna++) {
+                matriz[fila][columna] = String.valueOf(valor);
+                valor++;
+            }
+        }
+        imprimirMatriz(matriz);
+    }
 
 
 
@@ -308,6 +333,8 @@ public class Trasformadas {
     //new Trasformadas().Trasformadas10();
     //new Trasformadas().trasfomada11();
     //new Trasformadas().trasfomada26();
+    //new Trasformadas().trasfomada6();
+    new Trasformadas().trasfomada7();
 
 
    }
